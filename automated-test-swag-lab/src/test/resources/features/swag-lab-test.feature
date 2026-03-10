@@ -69,210 +69,210 @@ Feature: Swag Lab Test
         And all product added to cart
         When user clicking remove all of the product in cart
         Then Cart icon should show no product in cart
-# # TC-011
-#     Scenario: User clicked sort product by name A to Z
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking fillter button select Name A to Z
-#         Then the product should show by name A to Z
-# # TC-012     
-#     Scenario: User clicked sort product by name Z to A
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking fillter button select name Z to A
-#         Then the product should show by Name Z to A
-# # TC-013
-#     Scenario: User clicked sort product by price low to high
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking fillter button select price low to high
-#         Then the product should show by price low to high
-# # TC-014
-#     Scenario: User clicked sort product by price high to low
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking fillter button select price high to low
-#         Then the product should show by price high to low
-# # TC-015
-#     Scenario: A number of product at cart icon
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking add product to cart
-#         Then cart icon should show a number of product that had been added to cart
-# # TC-016
-#     Scenario: User clicked cart icon
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         When user clicking cart icon
-#         Then user should nevigate to cart page
+# TC-011
+    Scenario: User clicked sort product by name A to Z
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking fillter button select Name A to Z
+        Then the product should show by Name A to Z
+# TC-012     
+    Scenario: User clicked sort product by name Z to A
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking fillter button select Name Z to A
+        Then the product should show by Name Z to A
+# TC-013
+    Scenario: User clicked sort product by price low to high
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking fillter button select price low to high
+        Then the product should show by price low to high
+# TC-014
+    Scenario: User clicked sort product by price high to low
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking fillter button select price high to low
+        Then the product should show by price high to low
+# TC-015
+    Scenario: A number of product at cart icon
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking add product to cart
+        Then Cart icon should show number of the product
+# TC-016
+    Scenario: User clicked cart icon
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        When user clicking cart icon
+        Then user should nevigate to cart page
 
-# # CART PAGE FUNCTION
-# # TC-017
-#     Scenario: The name of product and price should match the selection form product page
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         Then The name of product and price should match the selection form product page
-# # TC-018
-#     Scenario: User clicking remove needless product
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         When user clicking remove button needless product
-#         Then The product should been remove
-# # TC-019
-#     Scenario: User clicking Continue Shopping to get back to product page
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         When user clicking Continue Shopping button
-#         Then The product should been remove
-# # TC-020
-#     Scenario: User clicking checkout button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         When user clicking checkout button
-#         Then user should nevigate to checkout Information page
+# CART PAGE FUNCTION
+# TC-017
+    Scenario: The name of product and price should match the selection form product page
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        Then The name of product and price should match the selection form product page
+# TC-018
+    Scenario: User clicking remove needless product
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        When user clicking remove button needless product
+        Then The product should been remove
+# TC-019
+    Scenario: User clicking Continue Shopping to get back to product page
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        When user clicking Continue Shopping button
+        Then user should nevigate to product page
+# TC-020
+    Scenario: User clicking checkout button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        When user clicking checkout button
+        Then user should nevigate to checkout Information page
 
-# # CHECKOUT INFORMATION PAGE FUNCTION
-# # TC-021
-#     Scenario: user clicking Cancel button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         When user clicking cancel button
-#         Then user should nevigate to cart page
-# # TC-022
-#     Scenario: user field all information and click continue button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         When user fill "Kael" name, "Hook" lastname and "12345" zipcode and clicking continue
-#         Then user should nevagate to checkout overview page
-# # TC-023
-#     Scenario Outline: user field some information and click continue button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         When user fill "<firstname>" name, "<lastname>" lastname and "<zipcode>" zipcode and clicking continue
-#         Then user should show an error message
-#         Examples:
-#         | firstname | lastname | zipcode |
-#         | Kael |  |  |
-#         | Kael | Hook |  |
-#         | Kael |  | 12345 |
-#         |  |  | 12345 |
-# # TC-024
-#     Scenario: user dosen't field information and click continue button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         When user dosen't fill information and clicking continue
-#         Then user should show an error message
+# CHECKOUT INFORMATION PAGE FUNCTION
+# TC-021
+    Scenario: user clicking Cancel button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        When user clicking cancel button
+        Then user should nevigate to cart page
+# TC-022
+    Scenario: user field all information and click continue button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        When user fill "Kael" name "Hook" lastname and "12345" zipcode and clicking continue
+        Then user should nevagate to checkout overview page
+# TC-023
+    Scenario Outline: user field some information and click continue button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        When user fill some "<firstname>" name or "<lastname>" lastname or "<zipcode>" zipcode and clicking continue
+        Then display should show an error message
+        Examples:
+        | firstname | lastname | zipcode |
+        | Kael |  |  |
+        | Kael | Hook |  |
+        | Kael |  | 12345 |
+        |  |  | 12345 |
+# TC-024
+    Scenario: user dosen't field information and click continue button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        When user dose not fill information and clicking continue
+        Then display should show an error message
 
-# # CHECKOUT OVERVIEW PAGE FUNCTION
-# # TC-025
-#     Scenario: The name of product and price should match the selection form product page
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         Then The name of product and price should match the selection form product page
-# # TC-026
-#     Scenario: user checking total product price
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         Then product price should correctly calculate the total, tax, and grand total
-# # TC-027
-#     Scenario: user clicking cancel button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         When user clicking cancel button
-#         Then user should nevagate to product page
-# # TC-028
-#     Scenario: user clicking finish button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         When user clicking finish button
-#         Then user should nevagate to the checkout complete page
+#CHECKOUT OVERVIEW PAGE FUNCTION
+# TC-025
+    Scenario: The name of product and price should match the selection form product page
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        Then The name of product and price should match the selection form product page
+# TC-026
+    Scenario: user checking total product price
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        Then total product price should correctly calculate
+# TC-027
+    Scenario: user clicking cancel button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        When user clicking cancel button checkout overview page
+        Then user should nevagate to product page
+# TC-028
+    Scenario: user clicking finish button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        When user clicking finish button
+        Then user should nevagate to the checkout complete page
 
-# #CHECKOUT COMPLETE PAGE FUNCTION
-# # TC-029
-#     Scenario: the cart icon number should be removed
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         And user clicking finish button
-#         Then the cart icon number should be removed
-# # TC-030
-#     Scenario: Checkout status should show Complete!
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         And user clicking finish button
-#         Then checkout status should show "Complete!"
-# # TC-031
-#     Scenario: user clicking Back Home button
-#         Given user enters Swag Labs homepage
-#         And user logged in successfully
-#         And user enters product page
-#         And user selects 2 items
-#         And user clicks on the cart icon
-#         And user clicks on the checkout button
-#         And user clicks continue button
-#         And user clicking finish button
-#         When user clicking Back Home button
-#         Then user should navigate back to the product page
+#CHECKOUT COMPLETE PAGE FUNCTION
+# TC-029
+    Scenario: the cart icon number should be removed
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        And user clicked finish button
+        Then the cart icon number should be removed
+# TC-030
+    Scenario: Checkout status should show Complete!
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        And user clicked finish button
+        Then checkout status should show Complete
+# TC-031
+    Scenario: user clicking Back Home button
+        Given user enters Swag Labs homepage
+        And user logged in successfully
+        And user enters product page
+        And user selects two product
+        And user clicked on the cart icon
+        And user clicked on the checkout button
+        And user clicked continue button
+        And user clicked finish button
+        When user clicking Back Home button
+        Then user should navigate back to the product page
