@@ -1,0 +1,26 @@
+# Maven
+/target/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# IntelliJ
+/.idea/
+*.iml
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# logs
+*.log
+
+# Cucumber reports or outputs if any
