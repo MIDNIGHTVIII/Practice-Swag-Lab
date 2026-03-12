@@ -50,49 +50,49 @@ public class StepDefinitions {
         page.close();
     }
 
-    @Given("user enters Swag Labs homepage")
-    public void user_enters_Swag_Labs_homepage() {
+    @Given("user entered Swag Labs homepage")
+    public void user_entered_Swag_Labs_homepage() {
         page.navigate("https://www.saucedemo.com/");
     }
 
     @And("user logged in successfully")
     public void user_logged_in_successfully() {
-        user_login_with_username_and_password_clicking_login_button("standard_user","secret_sauce");
+        user_login_with_username_and_password_click_login_button("standard_user","secret_sauce");
     }
 
-    @And("user enters product page")
-    public void user_enters_product_page() {
+    @And("user entered product page")
+    public void user_entered_product_page() {
         user_should_nevigate_to_product_page();
     }
 
     @And("all product added to cart")
     public void all_product_added_to_cart() {
-        user_clicking_add_all_product_to_cart();
+        user_click_add_all_product_to_cart();
     }
 
-    @And("user selects two product")
-    public void user_selects_two_product() {
-        user_clicking_add_two_product_to_cart();
+    @And("user selected two product")
+    public void user_selected_two_product() {
+        user_click_add_two_product_to_cart();
     }
 
     @And("user clicked on the cart icon")
     public void user_clicked_on_the_cart_icon() {
-        user_clicking_cart_icon();
+        user_click_cart_icon();
     }
 
     @And("user clicked on the checkout button")
     public void user_clicked_on_the_checkout_button() {
-        user_clicking_checkout_button();
+        user_click_checkout_button();
     }
 
     @And("user clicked continue button")
     public void user_clicked_continue_button() {
-        user_fill_name_lastname_and_zipcode_and_clicking_continue("Kael", "Hook", "12345");
+        user_fill_name_lastname_and_zipcode_and_click_continue("Kael", "Hook", "12345");
     }
 
     @And("user clicked finish button")
     public void user_clicked_finish_button() {
-        user_clicking_finish_button();
+        user_click_finish_button();
     }
 
 
@@ -105,8 +105,8 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user login with {string} and {string} clicking login button")
-    public void user_login_with_username_and_password_clicking_login_button(String username, String password) {
+    @When("user login with {string} and {string} click login button")
+    public void user_login_with_username_and_password_click_login_button(String username, String password) {
         page.locator("input#user-name").click();
         page.keyboard().type(username, new TypeOptions().setDelay(100));
         page.locator("input#password").click();
@@ -115,8 +115,8 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user login with {string} and {string} pressing Enter key")
-    public void user_login_with_username_and_password_pressing_Enter_key(String username, String password) {
+    @When("user login with {string} and {string} press Enter key")
+    public void user_login_with_username_and_password_press_Enter_key(String username, String password) {
         page.locator("input#user-name").click();
         page.keyboard().type(username, new TypeOptions().setDelay(100));
         page.locator("input#password").click();
@@ -125,30 +125,30 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user login with {string} and clicking login button")
-    public void user_login_with_password_clicking_login_button(String password) {
+    @When("user login with {string} and click login button")
+    public void user_login_with_password_click_login_button(String password) {
         page.locator("input#password").click();
         page.keyboard().type(password, new TypeOptions().setDelay(100));
         page.locator("input#login-button").click();
         page.waitForTimeout(300);
     }
 
-    @When("user login with {string} clicking login button")
-    public void user_login_with_username_clicking_login_button(String username) {
+    @When("user login with {string} click login button")
+    public void user_login_with_username_click_login_button(String username) {
         page.locator("input#user-name").click();
         page.keyboard().type(username, new TypeOptions().setDelay(100));
         page.locator("input#login-button").click();
         page.waitForTimeout(300);
     }
 
-    @When("user clicking login button with both fields blank")
-    public void user_clicking_login_button_with_both_fields_blank () {
+    @When("user click login button with both fields blank")
+    public void user_click_login_button_with_both_fields_blank () {
         page.locator("input#login-button").click();
         page.waitForTimeout(300);
     }
 
-    @When("user login with {string} and {string} and clicking login button")
-    public void user_login_with_invalid_username_and_invalid_password(String username, String password) {
+    @When("user login with {string} and {string} and click login button")
+    public void user_login_with_invalid_username_and_password_click_login_button(String username, String password) {
         page.locator("input#user-name").click();
         page.keyboard().type(username, new TypeOptions().setDelay(500));
         page.locator("input#password").click();
@@ -157,8 +157,8 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user clicking add all product to cart")
-    public void user_clicking_add_all_product_to_cart() {
+    @When("user click add all product to cart")
+    public void user_click_add_all_product_to_cart() {
         page.locator("button#add-to-cart-sauce-labs-backpack").click();
         page.locator("button#add-to-cart-sauce-labs-bike-light").click();
         page.locator("button#add-to-cart-sauce-labs-bolt-t-shirt").click();
@@ -168,15 +168,15 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user clicking add two product to cart")
-    public void user_clicking_add_two_product_to_cart() {
+    @When("user click add two product to cart")
+    public void user_click_add_two_product_to_cart() {
         page.locator(SelectedFirstProductLocator).click();
         page.locator(SelectedSecondProductLocator).click();
         page.waitForTimeout(300);
     }
 
-    @When("user clicking remove all of the product in cart")
-    public void user_clicking_remove_all_of_the_product_in_cart() {
+    @When("user click remove all of the product in cart")
+    public void user_click_remove_all_of_the_product_in_cart() {
         page.locator("button#remove-sauce-labs-backpack").click();
         page.locator("button#remove-sauce-labs-bike-light").click();
         page.locator("button#remove-sauce-labs-bolt-t-shirt").click();
@@ -186,64 +186,64 @@ public class StepDefinitions {
         page.waitForTimeout(300);
     }
 
-    @When("user clicking fillter button select Name A to Z")
-    public void user_clicking_fillter_button_select_Name_A_to_Z() {
+    @When("user click fillter button select Name A to Z")
+    public void user_click_fillter_button_select_Name_A_to_Z() {
         page.locator("select.product_sort_container").click();
         page.selectOption("select.product_sort_container", "az");
     }
 
-    @When("user clicking fillter button select Name Z to A")
-    public void user_clicking_fillter_button_select_Name_Z_to_A() {
+    @When("user click fillter button select Name Z to A")
+    public void user_click_fillter_button_select_Name_Z_to_A() {
         page.locator("select.product_sort_container").click();
         page.selectOption("select.product_sort_container", "za");
     }
 
-    @When("user clicking fillter button select price low to high")
-    public void user_clicking_fillter_button_select_price_low_to_high() {
+    @When("user click fillter button select price low to high")
+    public void user_click_fillter_button_select_price_low_to_high() {
         page.locator("select.product_sort_container").click();
         page.selectOption("select.product_sort_container", "lohi");
     }
 
-    @When("user clicking fillter button select price high to low")
-    public void user_clicking_fillter_button_select_price_high_to_low() {
+    @When("user click fillter button select price high to low")
+    public void user_click_fillter_button_select_price_high_to_low() {
         page.locator("select.product_sort_container").click();
         page.selectOption("select.product_sort_container", "hilo");
     }
 
-    @When("user clicking add product to cart")
-    public void user_clicking_add_product_to_cart() {
+    @When("user click add product to cart")
+    public void user_click_add_product_to_cart() {
         page.locator("button#add-to-cart-sauce-labs-backpack").click();
         page.waitForTimeout(300);
     }
 
-    @When("user clicking cart icon")
-    public void user_clicking_cart_icon() {
+    @When("user click cart icon")
+    public void user_click_cart_icon() {
         page.locator("a.shopping_cart_link").click();
         page.waitForTimeout(300);
     }
 
-    @When("user clicking remove button needless product")
-    public void user_clicking_remove_button_needless_product() {
+    @When("user click remove button needless product")
+    public void user_click_remove_button_needless_product() {
         page.locator(RemoveSecondProductLocator).click();
     }
 
-    @When("user clicking Continue Shopping button")
-    public void user_clicking_Continue_Shopping_button() {
+    @When("user click Continue Shopping button")
+    public void user_click_Continue_Shopping_button() {
         page.locator("button#continue-shopping").click();
     }
 
-    @When("user clicking checkout button")
-    public void user_clicking_checkout_button() {
+    @When("user click checkout button")
+    public void user_click_checkout_button() {
         page.locator("button#checkout").click();
     }
 
-    @When("user clicking cancel button")
-    public void user_clicking_cancel_button() {
+    @When("user click cancel button")
+    public void user_click_cancel_button() {
         page.locator("button#cancel").click();
     }
 
-    @When("user fill {string} name {string} lastname and {string} zipcode and clicking continue")
-    public void user_fill_name_lastname_and_zipcode_and_clicking_continue(String Name, String Lastname, String Zipcode) {
+    @When("user fill {string} name {string} lastname and {string} zipcode and click continue")
+    public void user_fill_name_lastname_and_zipcode_and_click_continue(String Name, String Lastname, String Zipcode) {
         page.locator(yourInfoNameLocator).click();
         page.keyboard().type(Name, new TypeOptions().setDelay(100));
         page.locator(yourInfoLastnameLocator).click();
@@ -253,8 +253,8 @@ public class StepDefinitions {
         page.locator("input#continue.submit-button").click();
     }
 
-    @When("user fill some {string} name or {string} lastname or {string} zipcode and clicking continue")
-    public void user_fill_some_name_or_lastname_or_zipcode_and_clicking_continue(String Name, String Lastname, String Zipcode) {
+    @When("user fill some {string} name or {string} lastname or {string} zipcode and click continue")
+    public void user_fill_some_name_or_lastname_or_zipcode_and_click_continue(String Name, String Lastname, String Zipcode) {
         page.locator(yourInfoNameLocator).click();
         page.keyboard().type(Name, new TypeOptions().setDelay(100));
         page.locator(yourInfoLastnameLocator).click();
@@ -264,22 +264,22 @@ public class StepDefinitions {
         page.locator("input#continue.submit-button").click();
     }
 
-    @When("user dose not fill information and clicking continue")
-    public void user_dose_not_fill_information_and_clicking_continue() {
+    @When("user dose not fill information and click continue")
+    public void user_dose_not_fill_information_and_click_continue() {
         page.locator("input#continue.submit-button").click();
     }
 
-    @When("user clicking cancel button checkout overview page")
-    public void user_clicking_cancel_button_checkout_overview_page() {
+    @When("user click cancel button checkout overview page")
+    public void user_click_cancel_button_checkout_overview_page() {
         page.locator("button#cancel").click();
     }
 
-    @When("user clicking finish button")
-    public void user_clicking_finish_button() {
+    @When("user click finish button")
+    public void user_click_finish_button() {
         page.locator("button#finish").click();
     }
 
-    @When("user clicking Back Home button")
+    @When("user click Back Home button")
     public void user_clicking_Back_Home_button() {
         page.locator("button#back-to-products").click();
     }
@@ -364,8 +364,8 @@ public class StepDefinitions {
         assertThat(page.locator(SelectedSecondProductName)).isVisible();
     }
 
-    @Then("The product should been remove")
-    public void The_product_should_been_remove() {
+    @Then("The product should be remove")
+    public void The_product_should_be_remove() {
         assertThat(page.locator(SelectedSecondProductLocator)).isHidden();
         page.waitForTimeout(300);
     }
